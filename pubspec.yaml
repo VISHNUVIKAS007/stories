@@ -59,6 +59,8 @@ flutter:
     - images/red.jpg
     - images/giant.jpg
     - images/reluctant.jpg
+    - images/witty.jpg
+    - images/sparrow.png
 
   # To add assets to your application, add an assets section, like this:
   # assets:
