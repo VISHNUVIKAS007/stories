@@ -5,17 +5,21 @@ class Home extends StatelessWidget{
   Widget build(BuildContext context) {
     final appBar=AppBar(
       elevation: .5,
-      backgroundColor: Colors.white,
-      /*leading: IconButton(
-        //icon: Icon(Icons.menu,color: Colors.black,), onPressed: () {}
-      ),*/
-      title: Text('STORIES',style: TextStyle(color: Colors.black),),
-      actions: <Widget>[
-        /*IconButton(
-          icon: Icon(Icons.search,color: Colors.black,),
-          onPressed: (){},
-        ),*/
-      ],
+      title: Text(
+        'LITTLE STORIES',
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: Colors.white,
+          fontStyle: FontStyle.normal,
+          decorationStyle: TextDecorationStyle.solid,
+        ),
+      ),
+      backgroundColor: Colors.redAccent,
+      /*actions: <Widget>[
+        IconButton(
+          icon: Icon(Icons.),
+        ),
+      ],*/
     );
     createTile(Stories stories)=>Hero(
       tag: stories.title,
@@ -48,7 +52,7 @@ class Home extends StatelessWidget{
       ],
     );
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
+      backgroundColor: Theme.of(context).accentColor,
       appBar: appBar,
       body: grid,
       drawer: Drawer(
@@ -56,21 +60,30 @@ class Home extends StatelessWidget{
           padding: EdgeInsets.zero,
           children: <Widget>[
             DrawerHeader(
-              child: Text('STORIES',
+              child: Text(
+                'LITTLE STORIES',
                 textAlign: TextAlign.center,
-
-                style: TextStyle(fontSize: 24,color: Colors.white),
+                style: TextStyle(
+                    color: Colors.white,
+                    height: 3,
+                    fontStyle: FontStyle.normal,
+                    fontSize: 20),
               ),
-              decoration: BoxDecoration(
-                color: Colors.red,
-              ),
-
+              decoration: BoxDecoration(color: Colors.redAccent),
+              padding: EdgeInsets.all(20),
+            ),
+            /*ListTile(
+              title: Text('Vishnu'),
+              onTap: () {},
             ),
             ListTile(
-              title: Text('Item1'),
-            ),
+              title: Text('Manjeri'),
+              onTap: () {},
+            ),*/
             ListTile(
-              title: Text('item2'),
+              leading: Icon(Icons.info),
+              title: Text('ABOUT',style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal),textAlign: TextAlign.justify,),
+              onTap: () {},
             ),
           ],
         ),

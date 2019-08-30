@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
       title: 'Stories App',
       debugShowCheckedModeBanner: false,
       theme: new ThemeData(
-        platform: TargetPlatform.iOS,
+        platform: TargetPlatform.android,
         primarySwatch: Colors.red,
         accentColor: Colors.white,
       ),
