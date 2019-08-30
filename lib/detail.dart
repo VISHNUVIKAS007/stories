@@ -8,7 +8,7 @@ class Detail extends StatelessWidget{
   Widget build(BuildContext context) {
     final appBar = AppBar(
       elevation: .5,
-      title: Text('Stories'),
+      title: Text('LTTLE STORIES'),
       actions: <Widget>[
         /*IconButton(
           icon: Icon(Icons.search),

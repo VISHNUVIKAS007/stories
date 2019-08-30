@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './about.dart';
 import 'data.dart';
 class Home extends StatelessWidget{
   @override
@@ -83,7 +84,9 @@ class Home extends StatelessWidget{
             ListTile(
               leading: Icon(Icons.info),
               title: Text('ABOUT',style: TextStyle(fontSize: 15,fontStyle: FontStyle.normal),textAlign: TextAlign.justify,),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context)=>About()));
+              },
             ),
           ],
         ),
